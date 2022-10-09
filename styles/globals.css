@@ -21,6 +21,13 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: rgb(0, 181, 165);
   }
+}
+
+#connectButton{
+  position : fixed;
+  top : 5px;
+  right : 5px;
+  padding: 5px;
 }
