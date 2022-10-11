@@ -1,16 +1,16 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
-@import "./donate.css" ;
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import "./donate.css";
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
 
-
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
     /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-    font-family: 'Silkscreen', cursive;
+    font-family: "Silkscreen", cursive;
 }
 
 a {
@@ -32,8 +32,8 @@ a {
     }
 }
 
-.header{
-    margin-left : 20px;
+.header {
+    margin-left: 20px;
 }
 
 #connectButton {
@@ -53,7 +53,7 @@ a {
 .form-element {
     padding: 5px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: 40vw;
     justify-content: space-evenly;
     font-size: medium;
@@ -63,23 +63,22 @@ a {
     font-size: 16px;
 }
 
-
 .form-element input {
     background-color: rgb(0, 181, 165);
     border: 2px solid rgba(3, 119, 57, 0.462);
     height: 35px;
-    font-family: 'Silkscreen', cursive;
+    font-family: "Silkscreen", cursive;
 }
 
 .form-element textarea {
     background-color: rgb(0, 181, 165);
     border: 2px solid rgba(3, 119, 57, 0.462);
     height: 35px;
-    font-family: 'Silkscreen', cursive;
+    font-family: "Silkscreen", cursive;
 }
 
 .form-button {
-    font-family: 'Silkscreen', cursive;
+    font-family: "Silkscreen", cursive;
     background-color: #4caf50; /* Green */
     border: none;
     color: white;
@@ -91,11 +90,12 @@ a {
     color: rgb(180, 221, 218);
     align-self: auto;
     margin-top: 17px;
+    cursor: pointer;
 }
 
 .form-button:hover {
     background-color: rgb(128, 255, 137);
-    color :rgb(0, 181, 165)
+    color: rgb(0, 181, 165);
 }
 
 form {
@@ -106,13 +106,19 @@ form {
 
 .flex-auto {
     align-self: center;
-    padding : 10px;
+    padding: 10px;
     width: 50vw;
     display: flex;
     flex-direction: column;
-    border : 2px solid rgba(3, 119, 57, 0.462) 
+    border: 2px solid rgba(3, 119, 57, 0.462);
 }
 
 .container {
     padding: 10px;
+}
+
+.connect-to-wallet {
+    position: absolute;
+    right: 5px;
+    top: 10px;
 }
