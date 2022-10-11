@@ -252,12 +252,12 @@ export default function Home() {
     return (
         <div className="">
             <Head>
-                <title>BuyMeaCoffee</title>
+                <title>Expresso Express</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main className="">
-                <h1 className="header">BuyMeACoffee</h1>
+                <h1 className="header">Expresso Express</h1>
                 {/*
                  * If there is currentAccount render this form, else render a button to connect wallet
                  */}
