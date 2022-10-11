@@ -1,0 +1,12 @@
+.tasty {
+    border: 1px solid red;
+}
+
+.super {
+    background-color: blue;
+}
+
+.donate-wrapper{
+    display: flex;
+    padding: 10px;
+}

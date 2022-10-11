@@ -7,7 +7,7 @@ import Head from "next/head";
 
 
 export default function Home() {
-  const contractAddress = "0x20d788A46c145cdd118d493362D84F9D0689acE2";
+  const contractAddress = "0x258a3F1777d9F30819F05a4220F57A1Ffa85A208";
   const contractABI = abi.abi;
   const [currentAccount, setCurrentAccount] = useState("");
   const [message, setMessage] = useState("");
@@ -245,32 +245,32 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="">
       <Head>
         <title>BuyMeaCoffee</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold text-blue-600 mb-6">
-          Buy Me A Coffee
+      <main className="">
+        <h1 className="header">
+          BuyMeACoffee
         </h1>
         {/*
          * If there is currentAccount render this form, else render a button to connect wallet
          */}
 
         {currentAccount ? (
-          <div className="w-full max-w-xs sticky top-3 z-50 ">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-              <div className="mb-4">
+          <div className="form-wrapper">
+            <form className="">
+              <div className="form-element">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className=""
                   htmlFor="name"
                 >
                   Name
                 </label>
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className=""
                   id="name"
                   type="text"
                   placeholder="Name"
@@ -279,16 +279,16 @@ export default function Home() {
                 />
               </div>
 
-              <div className="mb-4">
+              <div className="mb-4 form-element">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className=""
                   htmlFor="message"
                 >
                   Send the Creator a Message
                 </label>
 
                 <textarea
-                  className="form-textarea mt-1 block w-full shadow appearance-none py-2 px-3 border rounded text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className=""
                   rows="3"
                   placeholder="Message"
                   id="message"
@@ -297,9 +297,9 @@ export default function Home() {
                 ></textarea>
               </div>
 
-              <div className="flex items-left justify-between">
+              <div className="">
                 <button
-                  className="bg-blue-500 hover:bg-blue-700 text-center text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="form-button"
                   type="button"
                   onClick={buyCoffee}
                 >
@@ -310,36 +310,42 @@ export default function Home() {
           </div>
         ) : (
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full mt-3"
+            className=""
             onClick={connectWallet}
           >
             Connect Your Wallet
           </button>
         )}
 
+        <div class= "form-wrapper">
+        <h1>Our Supporters </h1>
+
         {allCoffee.map((coffee, index) => {
           return (
             <div className="border-l-2 mt-10" key={index}>
-              <div className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-blue-800 text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+              <div className="container">
                 {/* <!-- Dot Following the Left Vertical Line --> */}
-                <div className="w-5 h-5 bg-blue-600 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
+                <div className=""></div>
 
                 {/* <!-- Line that connecting the box with the vertical line --> */}
-                <div className="w-10 h-1 bg-green-300 absolute -left-10 z-0"></div>
+                <div className=""></div>
 
                 {/* <!-- Content that showing in the box --> */}
+
+
                 <div className="flex-auto">
-                  <h1 className="text-md">Supporter: {coffee.name}</h1>
-                  <h1 className="text-md">Message: {coffee.message}</h1>
-                  <h3>Address: {coffee.address}</h3>
-                  <h1 className="text-md font-bold">
-                    TimeStamp: {coffee.timestamp.toString()}
-                  </h1>
+                  <h2 className="text-md">Supporter: {coffee.message}</h2>
+                  <h2 className="text-md">Message: {coffee.name}</h2>
+                  {/* <h3>Address: {coffee.address}</h3> */}
+                  <h6 className="text-md font-bold">
+                    {coffee.timestamp.toString()}
+                  </h6>
                 </div>
               </div>
             </div>
           );
         })}
+      </div>
       </main>
       <ToastContainer
         position="bottom-right"

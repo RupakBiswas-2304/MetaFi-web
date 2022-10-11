@@ -1,33 +1,118 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+@import "./donate.css" ;
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    font-family: 'Silkscreen', cursive;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: rgb(0, 181, 165);
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: rgb(0, 181, 165);
+    }
 }
 
-#connectButton{
-  position : fixed;
-  top : 5px;
-  right : 5px;
-  padding: 5px;
+.header{
+    margin-left : 20px;
+}
+
+#connectButton {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+}
+
+.form-element {
+    padding: 5px;
+    display: flex;
+    flex-direction:column;
+    width: 40vw;
+    justify-content: space-evenly;
+    font-size: medium;
+}
+
+.form-element label {
+    font-size: 16px;
+}
+
+
+.form-element input {
+    background-color: rgb(0, 181, 165);
+    border: 2px solid rgba(3, 119, 57, 0.462);
+    height: 35px;
+    font-family: 'Silkscreen', cursive;
+}
+
+.form-element textarea {
+    background-color: rgb(0, 181, 165);
+    border: 2px solid rgba(3, 119, 57, 0.462);
+    height: 35px;
+    font-family: 'Silkscreen', cursive;
+}
+
+.form-button {
+    font-family: 'Silkscreen', cursive;
+    background-color: #4caf50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: rgb(180, 221, 218);
+    align-self: auto;
+    margin-top: 17px;
+}
+
+.form-button:hover {
+    background-color: rgb(128, 255, 137);
+    color :rgb(0, 181, 165)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-auto {
+    align-self: center;
+    padding : 10px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    border : 2px solid rgba(3, 119, 57, 0.462) 
+}
+
+.container {
+    padding: 10px;
 }
